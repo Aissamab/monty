@@ -3,7 +3,7 @@
 /**
  * nop - Does nothing.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @linenumber: Interger representing the line number of of the opcode.
  */
 void nop(stack_t **stack, unsigned int linenumber)
 {
@@ -15,7 +15,7 @@ void nop(stack_t **stack, unsigned int linenumber)
 /**
  * swap_elements - Swaps the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @linenumber: Interger representing the line number of of the opcode.
  */
 void swap_elements(stack_t **stack, unsigned int linenumber)
 {
@@ -36,7 +36,7 @@ void swap_elements(stack_t **stack, unsigned int linenumber)
 /**
  * add_elements - Adds the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * @linenumber: Interger representing the line number of of the opcode.
  */
 void add_elements(stack_t **stack, unsigned int linenumber)
 {
@@ -52,7 +52,7 @@ void add_elements(stack_t **stack, unsigned int linenumber)
 	(*stack)->prev = NULL;
 }
 /**
- * sub_elements - subtracts the top element of the stack from the second top element of the stack.
+ * sub_elements - subtracts the top element from the second top element .
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @linenumber: Interger representing the line number of of the opcode.
  */
