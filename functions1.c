@@ -71,3 +71,23 @@ void sub_elements(stack_t **stack, unsigned int linenumber)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+/**
+ * div_elements - Adds the top two elements of the stack.
+ * @stack: Pointer to a pointer pointing to top node of the stack.
+ * @linenumber: Interger representing the line number of of the opcode.
+ */
+void div_elements(stack_t **stack, unsigned int linenumber)
+{
+	int sum;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		MoreErr(8, linenumber, "div");
+
+	if ((*stack)->n == 0)
+		MoreErr(9, linenumber);
+	(*stack) = (*stack)->next;
+	sum = (*stack)->n / (*stack)->prev->n;
+	(*stack)->n = sum;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
+}

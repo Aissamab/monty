@@ -69,6 +69,7 @@ void nop(stack_t **stack, unsigned int linenumber);
 void swap_elements(stack_t **stack, unsigned int linenumber);
 void add_elements(stack_t **stack, unsigned int linenumber);
 void sub_elements(stack_t **stack, unsigned int linenumber);
+void div_elements(stack_t **stack, unsigned int linenumber);
 
 
 #endif
