@@ -89,6 +89,9 @@ void findfunction(char *opcode, char *value, int ln, int format)
 		{"pall", pint_stack},
 		{"pint", prinTop},
 		{"pop", pop_element},
+		{"nop", nop},
+		{"swap", swap_elements},
+		{"add", add_elements},
 		{NULL, NULL}
 	};
 

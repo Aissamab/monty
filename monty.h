@@ -65,6 +65,9 @@ void push_element(stack_t **new_node, __attribute__((unused))unsigned int ln);
 void pint_stack(stack_t **stack, unsigned int linenumber);
 void pop_element(stack_t **stack, unsigned int linenumber);
 void prinTop(stack_t **stack, unsigned int linenumber);
+void nop(stack_t **stack, unsigned int linenumber);
+void swap_elements(stack_t **stack, unsigned int linenumber);
+void add_elements(stack_t **stack, unsigned int linenumber);
 
 
 #endif
