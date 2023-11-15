@@ -1,4 +1,5 @@
 #include "monty.h"
+stack_t *head = NULL;
 
 /**
  * main - entry point
@@ -15,7 +16,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	open_file(argv[1]);
-	free_nodes();
+	freestack();
 	return (0);
 }
 
@@ -30,7 +31,7 @@ stack_t *createnode(int n)
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
-		err(4);
+		Error(4);
 	node->next = NULL;
 	node->prev = NULL;
 	node->n = n;

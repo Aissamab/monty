@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -8,7 +10,6 @@
 #include <ctype.h>
 #include <stdarg.h>
 
-stack_t *head = NULL;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,6 +41,10 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern stack_t *head;
+typedef void (*op_func)(stack_t **, unsigned int);
+
+
 void Error(int error_code, ...);
 void MoreErr(int error_code, ...);
 void stringErr(int error_code, ...);
@@ -49,6 +54,11 @@ void freestack(void);
 void addtoqueue(stack_t **new_node, __attribute__((unused))unsigned int ln);
 
 
+void callfunc(op_func func, char *op, char *val, int ln, int format);
+void findfunction(char *opcode, char *value, int ln, int format);
+int parseline(char *buffer, int line_number, int format);
+void readfile(FILE *fp);
+void open_file(char *file_name);
 
 
 void push_element(stack_t **new_node, __attribute__((unused))unsigned int ln);

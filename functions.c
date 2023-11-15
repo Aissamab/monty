@@ -54,7 +54,7 @@ void pop_element(stack_t **stack, unsigned int linenumber)
 	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL)
-		more_err(7, linenumber);
+		MoreErr(7, linenumber);
 
 	tmp = *stack;
 	*stack = tmp->next;
@@ -71,6 +71,6 @@ void pop_element(stack_t **stack, unsigned int linenumber)
 void prinTop(stack_t **stack, unsigned int linenumber)
 {
 	if (stack == NULL || *stack == NULL)
-		more_err(6, linenumber);
+		MoreErr(6, linenumber);
 	printf("%d\n", (*stack)->n);
 }
