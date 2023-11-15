@@ -93,6 +93,7 @@ void findfunction(char *opcode, char *value, int ln, int format)
 		{"swap", swap_elements},
 		{"add", add_elements},
 		{"sub", sub_elements},
+		{"div", div_elements},
 		{NULL, NULL}
 	};
 
