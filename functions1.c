@@ -62,7 +62,7 @@ void sub_elements(stack_t **stack, unsigned int linenumber)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 
-		more_err(8, line_number, "sub");
+		MoreErr(8, linenumber, "sub");
 
 
 	(*stack) = (*stack)->next;
